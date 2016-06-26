@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "res",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "inputTable",
+      "tableName": "Country",
+      "connection": "function621fb686a4df_STORAGE",
+      "direction": "in",
+      "partitionKey": "",
+      "rowKey": "",
+      "take": "",
+      "filter": ""
+    }
+  ],
+  "disabled": false
+}

@@ -26,31 +26,7 @@ $(function() {
         event.preventDefault();
     });
 
-     $.get("https://azuresolutionslets.azurewebsites.net/api/olympics-meter2?code=r4a3qqlia9cbq1cj9uftakyb9jhbpslx0youwmfwml84pr2j4i20qsa9p4fmd4q7qv8ku88mpldi", function (result) {
-
-        for (var i = 0; i < result.length; ++i) {
-            if (result[i]['Name'] === 'Brazil') {
-                result[i]['Score'] = parseFloat(0.9);
-            }
-            if (result[i]['Name'] === 'Chile') {
-                result[i]['Score'] = parseFloat(0.8);
-            }
-            if (result[i]['Name'] === 'Russia') {
-                result[i]['Score'] = parseFloat(0.7);
-            }
-            if (result[i]['Name'] === 'Spain') {
-                result[i]['Score'] = parseFloat(0.6);
-            }
-            if (result[i]['Name'] === 'Ireland') {
-                result[i]['Score'] = parseFloat(0.5);
-            }
-            if (result[i]['Name'] === 'Mexico') {
-                result[i]['Score'] = parseFloat(0.4);
-            }
-            if (result[i]['Name'] === 'Canada') {
-                result[i]['Score'] = parseFloat(0.3);
-            }
-        }
+     $.get("https://azuresolutionslets.azurewebsites.net/api/backend?code=6snx23fj0xhhefnynb5mm9rudizgs370gvuypa459gxjy7am7vi32inp7y0nmt58atacxl4k7qfr", function (result) {
         
         result.sort(function(a, b) {
             return parseFloat(b.Score) - parseFloat(a.Score);

@@ -1,6 +1,11 @@
 #r "Microsoft.WindowsAzure.Storage"
 
 using System.Net;
+using System;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Net.Http;
+using System.Threading.Tasks;
 using Microsoft.WindowsAzure.Storage.Table;
 
 public static bool Run(TimerInfo timer, CloudTable outTable, TraceWriter log)

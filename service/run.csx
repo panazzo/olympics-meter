@@ -8,7 +8,7 @@ public static bool Run(TimerInfo timer, CloudTable outTable, TraceWriter log)
     foreach(var c in outTable.CreateQuery<Country>().ToList())
     {
         // Change the Score number.
-        c.Score = "80";
+        c.Score = GetScore(c.Name);
         
         // Create the Replace TableOperation.
         TableOperation updateOperation = TableOperation.Merge(c);
@@ -18,6 +18,17 @@ public static bool Run(TimerInfo timer, CloudTable outTable, TraceWriter log)
     }
     
     return true;
+}
+
+public static string GetScore(String country)
+{
+    switch (country)
+    {
+        case "Brazil":
+            return "90";
+        default:
+            return "70";
+    }
 }
 
 public class Country : TableEntity

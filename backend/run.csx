@@ -13,11 +13,11 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, IQuery
 public class Country : TableEntity
 {
     public string Name { get; set; }
-    public float Score { get; set; }
+    public string Score { get; set; }
 }
 
 public class CountryResult
 {
     public string Name { get; set; }
-    public float Score { get; set; }
+    public string Score { get; set; }
 }

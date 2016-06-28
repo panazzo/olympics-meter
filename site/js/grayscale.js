@@ -16,6 +16,11 @@ function collapseNavbar() {
 $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
 
+$("#submit").click(function(event){
+    event.preventDefault();
+    alert("Handler for .click() called.");
+});
+
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
@@ -26,7 +31,7 @@ $(function() {
         event.preventDefault();
     });
 
-     $.get("https://azuresolutionslets.azurewebsites.net/api/backend?code=6snx23fj0xhhefnynb5mm9rudizgs370gvuypa459gxjy7am7vi32inp7y0nmt58atacxl4k7qfr", function (result) {
+     $.get("https://olympicsmeter.azurewebsites.net/api/country?code=x3v5zkb7ebm7ct2djx20529a8yjvy6axruml5b5niphnnrk9l8g8grwis1x6qmqqqvo9od2t9", function (result) {
         
         result.sort(function(a, b) {
             return parseFloat(b.Score) - parseFloat(a.Score);
@@ -39,6 +44,10 @@ $(function() {
             ykeys: ['Score'],
             barColors: ["#009E3D"],
             labels: ['Score']
+        });
+
+        $.each(result , function (index, value){
+            $('#select').append($('<option>').text(value["Name"]).attr('value', value["Name"]));
         });
     }); 
 });

@@ -1,0 +1,22 @@
+{
+  "bindings": [
+    {
+      "type": "table",
+      "name": "inputTable",
+      "tableName": "Country",
+      "connection": "olympicsmeter_STORAGE",
+      "direction": "in",
+      "partitionKey": "",
+      "rowKey": "",
+      "take": "",
+      "filter": ""
+    },
+    {
+      "type": "httpTrigger",
+      "name": "req",
+      "authLevel": "function",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}

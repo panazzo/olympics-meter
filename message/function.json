@@ -1,0 +1,35 @@
+{
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post"
+      ],
+      "authLevel": "anonymous"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "table",
+      "name": "outTable",
+      "tableName": "Country",
+      "connection": "olympicsmeter_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "table",
+      "name": "inputTable",
+      "tableName": "Keys",
+      "connection": "olympicsmeter_STORAGE",
+      "direction": "in",
+      "take": "",
+      "filter": ""
+    }
+  ],
+  "disabled": false
+}

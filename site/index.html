@@ -98,7 +98,7 @@
     <!-- Support Section -->
     <section id="support" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-8 col-lg-offset-2" id="formdiv">
                 <h2>Support your Country</h2>  
                 <p>Tell us how confident you are about your country's participation</p>
                 <form class="form-horizontal">
@@ -106,7 +106,7 @@
                     <!-- Select Basic -->
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="select">Select your country</label>
-                        <div class="col-md-8">
+                        <div class="col-md-6">
                             <select id="select" name="select" class="form-control">
                             </select>
                         </div>
@@ -115,8 +115,8 @@
                     <!-- Textarea -->
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="textarea">Support message</label>
-                        <div class="col-md-8">                     
-                            <textarea class="form-control" id="textarea" maxlength="500" name="textarea">\o/</textarea>
+                        <div class="col-md-6">                     
+                            <textarea class="form-control" id="textarea" maxlength="500" name="textarea" placeholder="Support your country in portuguese, english, spanish or french" rows="10" ></textarea>
                         </div>
                     </div>
 
@@ -127,6 +127,18 @@
 
                     </fieldset>
                 </form>
+            </div>
+            <div class="col-lg-8 col-lg-offset-2" id="resultdiv">
+                <h2>Your message scored: <span class="blue" id="scoreResult"></span></h2>  
+                <p>Thank you! Please, share us on Facebook and Twitter.</p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/intent/tweet?text=https://olympicsmeter.blob.core.windows.net/site/index.html" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://olympicsmeter.blob.core.windows.net/site/index.html" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>

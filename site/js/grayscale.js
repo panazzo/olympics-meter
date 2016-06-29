@@ -17,12 +17,35 @@ $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
 
 $("#submit").click(function(event){
+
     event.preventDefault();
-    alert("Handler for .click() called.");
+    var country = $("#select").val();
+    var text = $("#textarea").val();
+    var api = "https://olympicsmeter.azurewebsites.net/api/message?code=8laltc3s0xnos6u0ymh0ejyviv0j03r7wl09tt4y2ulpz7u8fr3mihvpvbu3zejexo8gghu2fbt9";
+
+ 
+    var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": api,
+    "method": "POST",
+    "headers": {
+        "content-type": "application/json"
+    },
+    "data": JSON.stringify({name: country, message: text})
+    }
+
+    $.ajax(settings).done(function (response) {
+        $("#resultdiv").show();
+        $("#scoreResult").text(String(response));
+        $("#formdiv").hide();
+    });
 });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
+    $("#resultdiv").hide();
+
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -35,7 +58,7 @@ $(function() {
         
         result.sort(function(a, b) {
             return parseFloat(b.Score) - parseFloat(a.Score);
-        });       
+        });
 
         new Morris.Bar({
             element: 'chart',
@@ -46,8 +69,26 @@ $(function() {
             labels: ['Score']
         });
 
+        result.sort(function(a, b) {
+            return compareStrings(a.Name, b.Name);
+        })
+
         $.each(result , function (index, value){
-            $('#select').append($('<option>').text(value["Name"]).attr('value', value["Name"]));
+            if(value["Name"] == "Brazil"){
+                $('#select').append($('<option selected>').text(value["Name"]).attr('value', value["Name"]));
+            }
+            else{
+                $('#select').append($('<option>').text(value["Name"]).attr('value', value["Name"]));
+            }
+
         });
     }); 
 });
+
+function compareStrings(a, b) {
+  // Assuming you want case-insensitive comparison
+  a = a.toLowerCase();
+  b = b.toLowerCase();
+
+  return (a < b) ? -1 : (a > b) ? 1 : 0;
+}

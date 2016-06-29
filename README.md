@@ -84,4 +84,4 @@ Por fim, vamos cadastrar a chave de acesso na tabela de chaves. Isso pode ser fe
 ![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img12.png)
 
 
-#### Parabéns! Sua aplicação está funcionando, e ser servidores!
+#### Parabéns! Sua aplicação está funcionando, e sem servidores!

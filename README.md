@@ -53,11 +53,12 @@ Para criar um novo Function App, no menu lateral de seu dashboard no Azure, cliq
 ### Passo 5: Publicando as funcões de back-end
 Para publicar as funções você pode copiar e colar as funções do projeto clonado na sua maquina ou configurar a integração contínua a partir de algum serviço de repositório. Abaixo mostra a configuração a partir do GitHub. Clique em Sync para garantir.
 
-https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img07.png
+![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img07.png)
+![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img08.png)
 
 Com as funções criadas, edite a aba Integrate para configurar a sua conta de Storage, para que ela fique acessível a partir da função.
 
-![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img08.png)
+![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img09.png)
 
 Copie os endpoints das APIs geradas para configurarmos o front-end
 
@@ -71,16 +72,16 @@ var APIMessage = "<ENDPOINT DA API MESSAGE>"
 ```
 Agora vamos publicar os arquivos estáticos no nosso container Blob. Isso pode ser feito de diversas maneiras como API Rest, Azure Cli, entre outros. , Para usuários de MacOS, uma das maneiras é utilzar o cliente Microsoft Azure Storage Explorer (http://storageexplorer.com/). Nele você pode configurar as chaves da sua conta de storage e publicar seus arquivos com uma interface parecida a de um FTP.
 
-![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img09.png)
+![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img10.png)
 
 ### Passo 7: Serviços cognitivos : Text Analytics
 O último serviço que falta criar na aplicação é o Azure cognitive services. Para criar um novo Cognitive services, no menu lateral de seu dashboard no Azure, clique em **New** > **Data + Analytics** > **Cognitive Services**. Insira informações como nome, assinatura e resource group. Em API Type, selecione Text Analytics.
 
-![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img10.png)
+![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img11.png)
 
 Por fim, vamos cadastrar a chave de acesso na tabela de chaves. Isso pode ser feito de diversas maneiras como API Rest, Azure Cli, entre outros. , Para usuários de MacOS, uma das maneiras é utilzar o cliente Microsoft Azure Storage Explorer (http://storageexplorer.com/). Nele você editar as tabelas na sua conta de storage.
 
-![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img11.png)
+![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img12.png)
 
 
 #### Parabéns! Sua aplicação está funcionando, e ser servidores!

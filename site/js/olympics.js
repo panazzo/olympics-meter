@@ -1,5 +1,5 @@
-var APIContry = "https://olympicsmeter.azurewebsites.net/api/country?code=x3v5zkb7ebm7ct2djx20529a8yjvy6axruml5b5niphnnrk9l8g8grwis1x6qmqqqvo9od2t9";
-var APIMessage = "https://olympicsmeter.azurewebsites.net/api/message?code=8laltc3s0xnos6u0ymh0ejyviv0j03r7wl09tt4y2ulpz7u8fr3mihvpvbu3zejexo8gghu2fbt9";
+var APIContry = "";
+var APIMessage = "";
 
 // jQuery to collapse the navbar on scroll
 function collapseNavbar() {

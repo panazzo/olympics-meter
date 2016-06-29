@@ -64,13 +64,13 @@ Copie os endpoints das APIs geradas para configurarmos o front-end
 
 ### Passo 6: Front-end : Arquivos estáticos (HTML, JS e CSS) 
 Agora que temos os endpoints das APIs geradas, vamos editar o arquivo **Site** > **JS** > **olympics.js**.
-
-Depois de criar uma nova conta de Storage, vamos publicar os arquivos do front-end em um container Blob, que ficará acessível ao público. Para isso clique em **Blob** > **+ Container**. Insira o nome do seu aplicativo para gerar sua URL pública de acesso ao web app, e no Access type, selecione Blob.
 ```
 var APIContry = "<ENDPOINT DA API COUNTRY>"
 var APIMessage = "<ENDPOINT DA API MESSAGE>"
 ```
-Agora vamos publicar os arquivos estáticos no nosso container Blob. Isso pode ser feito de diversas maneiras como API Rest, Azure Cli, entre outros. , Para usuários de MacOS, uma das maneiras é utilzar o cliente Microsoft Azure Storage Explorer (http://storageexplorer.com/). Nele você pode configurar as chaves da sua conta de storage e publicar seus arquivos com uma interface parecida a de um FTP.
+Depois de criar uma nova conta de Storage, vamos publicar os arquivos do front-end em um container Blob, que ficará acessível ao público. Para isso clique em **Blob** > **+ Container**. Insira o nome do seu aplicativo para gerar sua URL pública de acesso ao web app, e no Access type, selecione Blob.
+
+Agora vamos publicar os arquivos estáticos no nosso container Blob. Isso pode ser feito de diversas maneiras como API Rest, Azure Cli, entre outros. Para usuários de MacOS, uma das maneiras é utilzar o cliente Microsoft Azure Storage Explorer (http://storageexplorer.com/). Nele você pode configurar as chaves da sua conta de storage e publicar seus arquivos com uma interface parecida a de um FTP.
 
 ![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img10.png)
 

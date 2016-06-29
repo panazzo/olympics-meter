@@ -5,6 +5,21 @@ Análise de sentimento sobre seu país durante as olimpíadas do Rio de 2016.
 
 > Azure Solutionlets são soluções rápidas para problemas que podem ser resolvidos com pequenos deploys, utilizando o Microsoft Azure. Neste app, você aprenderá a criar e publicar uma aplicação distribuída que não necessita de servidores e utiliza os serviços cognitivos da Azure. 
 
+##Macro arquitetura:
+- Front-end: Azure Blob Storage (https://azure.microsoft.com/pt-br/services/storage/blobs/)
+- Back-end: Azure Functions (https://azure.microsoft.com/pt-br/services/functions/)
+- Serviços cognitivos: 	Azure Text Analytics (https://azure.microsoft.com/pt-br/services/cognitive-services/text-analytics/)
+- Armazenamento: Azure Table Storage (https://azure.microsoft.com/pt-br/services/storage/tables/)
+
+##Links importantes:
+
+* Live Demo: https://olympicsmeter.blob.core.windows.net/site/index.html
+* Trial do Azure: https://azure.microsoft.com/pt-br/pricing/free-trial/
+* GitHub: https://github.com/panazzo/olympics-meter
+* Visual Studio Code: https://code.visualstudio.com/
+* .Net Core: https://www.microsoft.com/net
+* MVA: https://mva.microsoft.com/
+
 ### Passo 0: Criar conta trial do Microsoft Azure
 Acesse https://azure.microsoft.com/pt-br/pricing/free-trial/ e clique no botão **Teste agora**:
 

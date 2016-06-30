@@ -46,6 +46,8 @@ Para criar uma nova conta de Storage, no menu lateral de seu dashboard no Azure,
 
 ![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img05.png)
 
+> Anote a região que a conta de Storage foi criada. Para utilizar a mesma conta de Storage no Azure Functions eles devem estar na mesma região
+
 ### Passo 3: Tabelas para armazenamento dos dados 
 Depois de criar uma nova conta de Storage, vamos criar uma tabela para armazenar os dados dos países e uma tabela para armazenar a chave de acesso ao Azure cognitive services. Abaixo está o comando para criar as tabelas utilizando Azure Cli, mas você pode escolher outras abordagens de administração.
 
@@ -63,13 +65,17 @@ Para garantir que as tabelas foram criadas com sucesso, liste todas e verifique
 azure storage table list
 ```
 
+> Caso queira pré-popular a tabela de países, importe o arquivo country.csv para a tabela Country. Configure todas as colunas como string 
+
 ### Passo 4: Back-end : Azure functions
 Para criar um novo Function App, no menu lateral de seu dashboard no Azure, clique em **New** > **Web + Mobile** > **Function App**. Insira informações como nome, assinatura, resource group e storage account.
+
+> Crie o serviço de Azure Functions na mesma região da conta de Storage para que eles fiquem acessíveis.
 
 ![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img06.png)
 
 ### Passo 5: Publicando as funcões de back-end
-Para publicar as funções você pode copiar e colar as funções do projeto clonado na sua maquina ou configurar a integração contínua a partir de algum serviço de repositório. Abaixo mostra a configuração a partir do GitHub. Clique em Sync para garantir.
+Para publicar as funções você pode copiar e colar as funções do projeto clonado na sua maquina ou configurar a integração contínua a partir de algum serviço de repositório. Abaixo a configuração foi feita a partir do GitHub. Clique em Sync para garantir.
 
 ![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img07.png)
 ![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/img08.png)

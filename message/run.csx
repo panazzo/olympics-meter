@@ -47,7 +47,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, IQuery
     //Response
     var resp = new HttpResponseMessage()
     {
-        Content = new StringContent(Convert.ToString(Math.Round(score, 1)))
+        Content = new StringContent(Convert.ToString(Math.Round(newScore, 1)))
     };
     
     resp.Content.Headers.ContentType = new MediaTypeHeaderValue("application/text");

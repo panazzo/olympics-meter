@@ -6,6 +6,9 @@ Análise de sentimento sobre seu país durante as olimpíadas do Rio de 2016.
 > Azure Solutionlets são soluções rápidas para problemas que podem ser resolvidos com pequenos deploys, utilizando o Microsoft Azure. Neste app, você aprenderá a criar e publicar uma aplicação distribuída que não necessita de servidores e utiliza os serviços cognitivos da Azure. 
 
 ##Macro arquitetura:
+
+![](https://raw.githubusercontent.com/panazzo/olympics-meter/master/images/Arquitetura.png)
+
 - Front-end: Azure Blob Storage (https://azure.microsoft.com/pt-br/services/storage/blobs/)
 - Back-end: Azure Functions (https://azure.microsoft.com/pt-br/services/functions/)
 - Serviços cognitivos: 	Azure Text Analytics (https://azure.microsoft.com/pt-br/services/cognitive-services/text-analytics/)

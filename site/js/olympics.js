@@ -18,9 +18,7 @@ $("#submit").click(function(event){
     event.preventDefault();
     var country = $("#select").val();
     var text = $("#textarea").val();
-    var api = "https://olympicsmeter.azurewebsites.net/api/message?code=8laltc3s0xnos6u0ymh0ejyviv0j03r7wl09tt4y2ulpz7u8fr3mihvpvbu3zejexo8gghu2fbt9";
 
- 
     var settings = {
     "async": true,
     "crossDomain": true,
